@@ -5,17 +5,23 @@
 }
 
 .card {
-  position: relative;
-  width:100%;
-  max-width: 320px;
-  height: 480px;
-  clip-path: polygon(15% 0%, 100% 0, 100% 100%, 0 100%, 0% 11%);
-  border: 4px solid $blue;
-  border-radius:12px;
-  background-color: $background-color;
-  color: $black;
-  padding: 21px 54px 0 51px;
-  overflow: hidden;
+
+  &__insert{
+    position: relative;
+    width:100%;
+    max-width: 320px;
+    height: 480px;
+    border: 4px solid $blue;
+    border-top-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    background-color: $background-color;
+    color: $black;
+    clip-path: polygon(15% 0%, 100% 0, 100% 100%, 0 100%, 0% 11%);
+    padding: 21px 54px 0 51px;
+    margin-bottom: 15px;
+    overflow: hidden;
+  }
 
   &__header {
   }
@@ -52,12 +58,6 @@
     & span{
       font-weight: 700;
     }
-
-    &_dose {
-    }
-
-    &_bonus {
-    }
   }
 
   &__img {
@@ -83,7 +83,6 @@
       font-weight: 400;
       font-size: 42px;
       line-height: 22px;
-
       color: $white;
       margin-bottom: 6px;
     }
@@ -93,6 +92,20 @@
       font-size: 21px;
       line-height: 22px;
       color: $white;
+    }
+  }
+
+  &__pay{
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+    color: $white;
+    text-align: center;
+
+    &_link{
+      width: 100%;
+      color: $blue;
+      border-bottom: 1px dashed $blue;
     }
   }
 }
